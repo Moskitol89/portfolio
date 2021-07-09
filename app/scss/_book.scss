@@ -1,0 +1,163 @@
+.main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  background-color: grey;
+}
+
+.album {
+  position: relative;
+  height: 400px;
+  width: 600px;
+  transform-style: preserve-3d;
+}
+
+.album__page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  animation-fill-mode: both;
+}
+
+.page__front {
+  background-color: hotpink;
+  transform-origin: left center;
+  z-index: 3;
+  &.open {
+    animation: album-open .5s .0s both;
+  }
+  &.close {
+    animation: album-close .5s .5s both;
+  }
+}
+
+.page__1 {
+  background-color: white;
+  transform: rotateY(160deg);
+  left: -600px;
+  transform-origin: right center;
+
+
+  &.open {
+    animation: album-page-1-open .5s 0s both;
+  }
+  &.close {
+    animation: album-page-1-close .5s .5s both;
+  }
+}
+
+.page__2 {
+  background-color: green;
+}
+
+.page__3 {
+  background-color: red;
+  left: 600px;
+  transform-origin: left center;
+  transform: rotateY(-160deg);
+
+  &.open {
+    animation: album-page-3-open .5s .5s both;
+  }
+  &.close {
+    animation: album-page-3-close .5s 0s both;
+  }
+}
+
+.page__back {
+  background-color: blue;
+  transform-origin: right center;
+  z-index: 2;
+  &.open {
+    animation: album-open-back .5s .5s both;
+  }
+  &.close {
+    animation: album-close-back .5s 0s both;
+  }
+}
+
+.album__btn {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+//animations
+@keyframes album-open {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-160deg);
+  }
+}
+@keyframes album-open-back {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(160deg);
+  }
+}
+@keyframes album-close-back {
+  from {
+    transform: rotateY(160deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes album-close {
+  from {
+    transform: rotateY(-160deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes album-page-1-open {
+  from {
+    transform: rotateY(160deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes album-page-1-close {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(160deg);
+  }
+}
+
+@keyframes album-page-3-open {
+  from {
+    transform: rotateY(-160deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes album-page-3-close {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-160deg);
+  }
+}
