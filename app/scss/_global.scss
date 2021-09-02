@@ -10,16 +10,14 @@ html {
   padding: 0;
 }
 
+body{
+  font-family: 'Oswald', sans-serif;
+}
+
 a{
   text-decoration: none;
   display: inline-block;
   color: #000;
-}
-
-container {
-  max-width: 1090px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 
 h1,
@@ -37,4 +35,7 @@ p {
 
 li {
   display: inline-block;
+}
+.container {
+  padding: 50px 25px;
 }

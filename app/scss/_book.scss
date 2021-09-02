@@ -1,16 +1,20 @@
 .main {
+  background-image: url("../img/bck.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #bebebe;
   height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 1200px;
-  background-color: grey;
+  perspective: 1600px;
 }
 
 .album {
   position: relative;
-  height: 400px;
+  height: 600px;
   width: 600px;
   transform-style: preserve-3d;
 }
@@ -23,12 +27,26 @@
   height: 100%;
   backface-visibility: hidden;
   animation-fill-mode: both;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background-image: url("../img/paper.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .page__front {
-  background-color: hotpink;
+
+  color: #fff;
+  background-image: url("../img/front.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #37B6CE;
+  font-weight: 700;
+  text-transform: uppercase;
   transform-origin: left center;
   z-index: 3;
+  text-shadow: 0  0  5px #000;
   &.open {
     animation: album-open .5s .0s both;
   }
@@ -36,14 +54,73 @@
     animation: album-close .5s .5s both;
   }
 }
+.page__front-title {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  text-shadow: #253e45 -1px 1px 0, #253e45 -2px 2px 0, #d45848 -3px 3px 0, #d45848 -4px 4px 0;
+}
+.page__front-subtitle {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 23px;
+  color: #FFBF40;
+}
+
+.page__front-items {
+  margin-top: 70px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.front__item-title {
+  font-size: 20px;
+  color: #FFAA00;
+  font-weight: 700;
+}
+.front__item-subtitle {
+  font-size: 24px;
+
+}
+
+.front__item {
+  &:not(:last-child){
+    margin-bottom: 70px;
+  }
+}
+
+.inner-page__title-wrapper {
+  position: relative;
+  text-align: center;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+  }
+}
+.inner-page__title {
+  //margin: 0 auto;
+  //display: block;
+  //width: fit-content;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 22px;
+  border-radius: 8px;
+}
 
 .page__1 {
   background-color: white;
   transform: rotateY(160deg);
   left: -600px;
   transform-origin: right center;
-
-
   &.open {
     animation: album-page-1-open .5s 0s both;
   }
@@ -53,15 +130,15 @@
 }
 
 .page__2 {
-  background-color: green;
+  z-index: 1;
 }
 
 .page__3 {
-  background-color: red;
+
   left: 600px;
   transform-origin: left center;
   transform: rotateY(-160deg);
-
+  
   &.open {
     animation: album-page-3-open .5s .5s both;
   }
@@ -71,7 +148,7 @@
 }
 
 .page__back {
-  background-color: blue;
+  background: blue;
   transform-origin: right center;
   z-index: 2;
   &.open {

@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -11,14 +16,51 @@
     <div class="album">
         <div class="album__sheet">
             <div class="album__page page__back"><h1>back</h1></div>
-            <div class="album__page page__3"><h1>3</h1></div>
+            <div class="album__page page__3 inner-page">
+                <div class="container">
+                    <h2 class="inner-page__title-wrapper">
+                        <span class="inner-page__title">Связаться</span>
+                    </h2>
+                </div>
+            </div>
         </div>
         <div class="album__sheet">
-            <div class="album__page page__2"><h1>2</h1></div>
+            <div class="album__page page__2 inner-page">
+                <div class="container">
+                    <h2 class="inner-page__title-wrapper">
+                        <span class="inner-page__title">Мои работы</span>
+                    </h2>
+                </div>
+            </div>
         </div>
         <div class="album__sheet">
-            <div class="album__page page__1"><h1>1</h1></div>
-            <div class="album__page page__front"><h1>front</h1></div>
+            <div class="album__page page__1 inner-page">
+                <div class="container">
+                    <h2 class="inner-page__title-wrapper">
+                        <span class="inner-page__title">Обо мне</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="album__page page__front front">
+                <h1 class="page__front-title">Курганов Владимир</h1>
+                <h3 class="page__front-subtitle">
+                    программист / верстальщик / фрилансер
+                </h3>
+                <ul class="page__front-items">
+                    <li class="page__front-item front__item">
+                        <h2 class="front__item-title">Тут текст</h2>
+                        <h3 class="front__item-subtitle">И еще тут немного</h3>
+                    </li>
+                    <li class="page__front-item front__item">
+                        <h2 class="front__item-title">К сожалению</h2>
+                        <h3 class="front__item-subtitle">я не занимаюсь дизайном</h3>
+                    </li>
+                    <li class="page__front-item front__item">
+                        <h2 class="front__item-title">Фриланс</h2>
+                        <h3 class="front__item-subtitle">только верстка</h3>
+                    </li>
+                </ul>
+            </div>
         </div>
         <button class="album__btn"></button>
     </div>
