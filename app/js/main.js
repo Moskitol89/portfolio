@@ -15,7 +15,9 @@ albumPages.forEach( el => {
 })
 
 albumBtn.addEventListener("click", function () {
-   albumPages.forEach( el => {
+    albumBtn.classList.remove("show");
+    albumBtn.classList.add("close");
+    albumPages.forEach( el => {
        if(el.classList.contains("open") && !album.classList.contains("animating")) {
            el.classList.remove("open");
            el.classList.add("close");
@@ -25,3 +27,4 @@ albumBtn.addEventListener("click", function () {
        }
    })
 });
+
