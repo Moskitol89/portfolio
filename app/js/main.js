@@ -1,6 +1,8 @@
 const albumBtn = document.querySelector(".album__btn");
 const albumPages = document.querySelectorAll(".album__page");
 const album = document.querySelector(".album");
+const cancelBtn = document.querySelector(".connect__cancel");
+
 albumPages.forEach( el => {
     el.addEventListener("animationstart", function () {
         if(!album.classList.contains("animating")) {
@@ -28,3 +30,16 @@ albumBtn.addEventListener("click", function () {
    })
 });
 
+cancelBtn.addEventListener("click", function() {
+    albumBtn.classList.remove("close");
+    albumBtn.classList.add("show");
+    albumPages.forEach( el => {
+        if(el.classList.contains("open") && !album.classList.contains("animating")) {
+            el.classList.remove("open");
+            el.classList.add("close");
+        } else if(!album.classList.contains("animating"))  {
+            el.classList.add("open");
+            el.classList.remove("close");
+        }
+    })
+});
