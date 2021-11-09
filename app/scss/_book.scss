@@ -9,16 +9,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 1600px;
+
 }
 
 .album {
   position: relative;
   height: 600px;
   width: 600px;
-  transform-style: preserve-3d;
+  perspective: 1600px;
 }
 
+.album__sheet {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  position: absolute;
+}
+
+.album__sheet-first {
+  z-index: 5;
+}
+
+.album__sheet-second {
+  z-index: 3;
+}
+
+.album__sheet-third {
+  z-index: 4;
+}
 .album__page {
   position: absolute;
   left: 0;
@@ -36,7 +54,7 @@
 
 .page__front {
   color: #fff;
-  background-image: url("../img/front.jpg");
+  background-image: url("../img/front-2.jpg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -170,6 +188,19 @@
   z-index: 1;
 }
 
+.works__items {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.works__item {
+  width: 150px;
+  height: 150px;
+  background-color: #b348d4;
+  margin-top: 20px;
+}
 .page__3 {
   left: 600px;
   transform-origin: left center;
@@ -218,9 +249,9 @@
   &:before {
     content: "";
     display: block;
-    border-top: 25px solid #d45848;
-    border-left: 25px solid #d45848;
-    border-right: 25px solid #d45848;
+    border-top: 25px solid #b348d4;
+    border-left: 25px solid #b348d4;
+    border-right: 25px solid #b348d4;
     border-bottom: 50px solid transparent;
   }
 }
