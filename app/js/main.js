@@ -1,9 +1,10 @@
 const albumBtn = document.querySelector(".album__btn");
-const albumPages = document.querySelectorAll(".album__page");
+const albumSheets = document.querySelectorAll(".album__sheet");
 const album = document.querySelector(".album");
 const cancelBtn = document.querySelector(".connect__cancel");
+const popups = document.querySelector(".popups");
 
-albumPages.forEach( el => {
+albumSheets.forEach( el => {
     el.addEventListener("animationstart", function () {
         if(!album.classList.contains("animating")) {
             album.classList.add("animating");
@@ -19,7 +20,7 @@ albumPages.forEach( el => {
 albumBtn.addEventListener("click", function () {
     albumBtn.classList.remove("show");
     albumBtn.classList.add("close");
-    albumPages.forEach( el => {
+    albumSheets.forEach( el => {
        if(el.classList.contains("open") && !album.classList.contains("animating")) {
            el.classList.remove("open");
            el.classList.add("close");
@@ -33,7 +34,7 @@ albumBtn.addEventListener("click", function () {
 cancelBtn.addEventListener("click", function() {
     albumBtn.classList.remove("close");
     albumBtn.classList.add("show");
-    albumPages.forEach( el => {
+    albumSheets.forEach( el => {
         if(el.classList.contains("open") && !album.classList.contains("animating")) {
             el.classList.remove("open");
             el.classList.add("close");

@@ -28,6 +28,13 @@
 
 .album__sheet-first {
   z-index: 5;
+  transform-origin: left center;
+  &.open {
+    animation: album-open 0.5s 0s both;
+  }
+  &.close {
+    animation: album-close 0.5s 0.5s both;
+  }
 }
 
 .album__sheet-second {
@@ -36,6 +43,13 @@
 
 .album__sheet-third {
   z-index: 4;
+  transform-origin: right center;
+  &.open {
+    animation: album-open-back 0.5s 0.5s both;
+  }
+  &.close {
+    animation: album-close-back 0.5s 0s both;
+  }
 }
 .album__page {
   position: absolute;
@@ -61,15 +75,9 @@
   background-color: #37b6ce;
   font-weight: 700;
   text-transform: uppercase;
-  transform-origin: left center;
   z-index: 3;
   text-shadow: 0 0 5px #000;
-  &.open {
-    animation: album-open 0.5s 0s both;
-  }
-  &.close {
-    animation: album-close 0.5s 0.5s both;
-  }
+
 }
 .page__front-title {
   margin-top: 30px;
@@ -135,12 +143,6 @@
   transform: rotateY(160deg);
   left: -600px;
   transform-origin: right center;
-  &.open {
-    animation: album-page-1-open 0.5s 0s both;
-  }
-  &.close {
-    animation: album-page-1-close 0.5s 0.5s both;
-  }
 }
 .about__items {
   margin-top: 50px;
@@ -188,6 +190,7 @@
   z-index: 1;
 }
 
+
 .works__items {
   margin-top: 30px;
   display: flex;
@@ -205,25 +208,12 @@
   left: 600px;
   transform-origin: left center;
   transform: rotateY(-160deg);
-
-  &.open {
-    animation: album-page-3-open 0.5s 0.5s both;
-  }
-  &.close {
-    animation: album-page-3-close 0.5s 0s both;
-  }
 }
 
 .page__back {
   background: blue;
   transform-origin: right center;
   z-index: 2;
-  &.open {
-    animation: album-open-back 0.5s 0.5s both;
-  }
-  &.close {
-    animation: album-close-back 0.5s 0s both;
-  }
 }
 
 .connect__cancel {
@@ -260,6 +250,35 @@
 }
 .album__btn.close {
   animation: btn_close 1s both;
+}
+//popups 
+.popups {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(35, 55, 61, 0.7);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  display: none;
+}
+
+.popup {
+  margin: 200px 0;
+  width: 1000px;
+  background-color: #bce2f5;
+  visibility: hidden;
+}
+
+.popup__img {
+  width: 100%;
+}
+.popup__text {
+  padding: 25px 10px;
+  text-align: center;
+  font-size: 18px;
 }
 
 //animations
