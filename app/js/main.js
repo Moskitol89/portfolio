@@ -2,7 +2,11 @@ const albumBtn = document.querySelector(".album__btn");
 const albumSheets = document.querySelectorAll(".album__sheet");
 const album = document.querySelector(".album");
 const cancelBtn = document.querySelector(".connect__cancel");
-const popups = document.querySelector(".popups");
+const popupsWrapper = document.querySelector(".popups");
+const works = document.querySelectorAll(".works__item");
+const popups = document.querySelectorAll(".popup");
+
+let clickedWorksTargetNumber;
 
 albumSheets.forEach( el => {
     el.addEventListener("animationstart", function () {
@@ -43,4 +47,26 @@ cancelBtn.addEventListener("click", function() {
             el.classList.remove("close");
         }
     })
+});
+
+//popup
+works.forEach( el => {
+    el.addEventListener("click", function(event) {
+        for(let i = 0; i < works.length; i++) {
+            if(event.currentTarget == works[i]) {
+                clickedWorksTargetNumber = i;
+                console.log(event.target.className);
+            }
+        }
+        popupsWrapper.classList.add("open");
+        popups[clickedWorksTargetNumber].classList.add("open");
+    });
+});
+
+popupsWrapper.addEventListener("click", function(event) {
+    if(event.target.className == "popups open") {
+        console.log("boom")
+        popupsWrapper.classList.remove("open");
+        popups[clickedWorksTargetNumber].classList.remove("open");
+    }
 });
