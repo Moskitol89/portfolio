@@ -55,7 +55,6 @@ works.forEach( el => {
         for(let i = 0; i < works.length; i++) {
             if(event.currentTarget == works[i]) {
                 clickedWorksTargetNumber = i;
-                console.log(event.target.className);
             }
         }
         popupsWrapper.classList.add("open");
@@ -65,8 +64,8 @@ works.forEach( el => {
 
 popupsWrapper.addEventListener("click", function(event) {
     if(event.target.className == "popups open") {
-        console.log("boom")
         popupsWrapper.classList.remove("open");
         popups[clickedWorksTargetNumber].classList.remove("open");
     }
 });
+
