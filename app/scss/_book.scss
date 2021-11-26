@@ -227,6 +227,10 @@
   z-index: 2;
 }
 
+.connect {
+  overflow-y: scroll;
+}
+
 .connect__cancel {
   position: absolute;
   background-image: url("../img/cancel.svg");
@@ -267,6 +271,43 @@
   width: 100%;
 }
 
+.coonect__input-wrapper {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.connect__form-name,
+.connect__form-email,
+.connect__form-text
+ {
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1ps solid #333;
+  resize: none;
+  padding: 10px;
+}
+.connect__form-name {
+  flex-grow: 3;
+}
+.connect__form-email {
+  flex-grow: 1;
+  margin-left: 5px;
+}
+.connect__form-text {
+  display: block;
+  width: 100%;
+}
+.connect__form-button {
+  display: block;
+  width: 100px;
+  height: 50px;
+  margin: 10px 0 0 auto;
+  color: #fff;
+  background-color: #333;
+  cursor: pointer;
+}
 //map 
 .connect__map {
   width: 100%;
