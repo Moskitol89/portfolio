@@ -25,14 +25,17 @@
                         <h2 class="inner-page__title-wrapper">
                             <span class="inner-page__title">Связаться</span>
                         </h2>
-                        <iframe class="connect__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30212.31443024461!2d37.630756150276895!3d55.74905673881066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5b4c576dbf%3A0x93a829189a1d29f2!2z0JHQvtC70YzRiNC-0Lkg0YLQtdCw0YLRgA!5e0!3m2!1sru!2sru!4v1637675318454!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe class="connect__map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30212.31443024461!2d37.630756150276895!3d55.74905673881066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5b4c576dbf%3A0x93a829189a1d29f2!2z0JHQvtC70YzRiNC-0Lkg0YLQtdCw0YLRgA!5e0!3m2!1sru!2sru!4v1637675318454!5m2!1sru!2sru"
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         <img class="connect__line" src="img/line.png" alt="">
                         <form class="connect__form" action="">
                             <div class="coonect__input-wrapper">
                                 <input class="connect__form-name" placeholder="фио" type="text">
                                 <input class="connect__form-email" placeholder="e-mail" type="text">
                             </div>
-                            <textarea class="connect__form-text" placeholder="Текст" name="" id="" cols="30" rows="10"></textarea>
+                            <textarea class="connect__form-text" placeholder="Текст" name="" id="" cols="30"
+                                rows="10"></textarea>
                             <button class="connect__form-button">Отправить</button>
                         </form>
                         <div class="connect__cancel"></div>
@@ -49,7 +52,7 @@
                             <div class="works__item" style="background-image: url(img/larson-logo.jpg);"></div>
                             <div class="works__item" style="background-image: url(img/dream-spa-logo.jpg);"></div>
                             <div class="works__item" style="background-image: url(img/grill-place-logo.jpg);"></div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -61,19 +64,23 @@
                             <span class="inner-page__title">Обо мне</span>
                         </h2>
                         <ul class="about__items">
-                            <li class="about__item java-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-                                reprehenderit inventore aperiam itaque mollitia optio, facilis error, iusto asperiores
-                                eligendi ipsam animi doloremque eum ea at, nesciunt temporibus? Cum, sapiente!</li>
-                            <li class="about__item android-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem
-                                provident error ex amet dolorum, sequi id nobis magnam, nesciunt suscipit officiis
-                                distinctio sunt incidunt obcaecati sapiente perferendis esse commodi maiores?</li>
-                            <li class="about__item html-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem
-                                provident error ex amet dolorum, sequi id nobis magnam, nesciunt suscipit officiis
-                                distinctio sunt incidunt obcaecati sapiente perferendis esse commodi maiores?</li>
-                            <li class="about__item setting-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem
-                                provident error ex amet dolorum, sequi id nobis magnam, nesciunt suscipit officiis
-                                distinctio sunt incidunt obcaecati sapiente perferendis esse commodi maiores?</li>
+                            <li class="about__item java-item">Начинал свою знакомство с миром IT с Java. Этот язык дал
+                                отличный
+                                фундамент. Работал с фреймворками: Spring(MVC,security), Hibernate, Maven.
+                            </li>
+                            <li class="about__item android-item">Одно из направлений Java - разработка приложений
+                                для смартфонов на os Android. Имею небольшой, но все же, опыт. </li>
+                            <li class="about__item html-item">Во время обучения Java приходилось иметь дело с версткой
+                                сайтов,
+                                но то был поверхностный опыт. Сейчас это основное направление в котором я хочу двигаться
+                                и развиваться.
+                                Акутальный стек: HTML, CSS, SCSS, GULP, JQuery, JS. В процессе: WP, Bootstrap.
+                            </li>
+                            <li class="about__item setting-item">Так же знаком с реляционными БД(работал с MySQ),
+                                алгоритмами, паттернами проектирования.
+                            </li>
                         </ul>
+                        <!-- <img class="about__books" src="img/books.png" alt=""> -->
                     </div>
                 </div>
                 <div class="album__page page__front front">
@@ -101,27 +108,33 @@
         </div>
     </main>
     <div class="popups">
+
         <figure class="popup">
-            <a href="https://larson.kurganov-web.ru/" target="_blank">
+            <a class="popups__link" href="https://larson.kurganov-web.ru/" target="_blank">
                 <img class="popup__img" src="img/larson.jpg" alt="">
+                <figcaption class="popup__text">Современный многостраничный сайт студии интерьера,
+                    так же занимающейся внутренней и внешней отделкой, архитектурой и строительством.
+                </figcaption>
             </a>
-            <figcaption class="popup__text">Современный многостраничный сайт студии интерьера, 
-                так же занимающейся внутренней и внешней отделкой, архитектурой и строительством.
-            </figcaption>
         </figure>
+
+
         <figure class="popup">
-            <a href="https://dreamspa.kurganov-web.ru/" target="_blank">
+            <a class="popups__link" href="https://dreamspa.kurganov-web.ru/" target="_blank">
                 <img class="popup__img" src="img/dream-spa.jpg" alt="">
+                <figcaption class="popup__text">Многостраничный сайт спа центра с блогом и магазином. </figcaption>
             </a>
-            <figcaption class="popup__text">Многостраничный сайт спа центра с блогом и магазином.            </figcaption>
         </figure>
+
+
         <figure class="popup">
-            <a href="https://grill-place.kurganov-web.ru/" target="_blank">
+            <a class="popups__link" href="https://grill-place.kurganov-web.ru/" target="_blank">
                 <img class="popup__img" src="img/grill-place.jpg" alt="">
+                <figcaption class="popup__text">Одностраничный сайт ресторана американской кухни.
+                </figcaption>
             </a>
-            <figcaption class="popup__text">Одностраничный сайт ресторана американской кухни.
-            </figcaption>
         </figure>
+
     </div>
     <script src="js/main.min.js"></script>
 </body>
