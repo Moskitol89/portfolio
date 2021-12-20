@@ -1,5 +1,5 @@
 .main {
-  background-image: url("../img/bck.jpg");
+  background-image: url("../img/black.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -9,7 +9,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .album {
@@ -24,6 +23,12 @@
   height: 100%;
   transform-style: preserve-3d;
   position: absolute;
+}
+//fix firefox bug: bacface-visibility dublicated for parent 
+@-moz-document url-prefix() {
+  .album__sheet {
+    backface-visibility: hidden;;
+  }
 }
 
 .album__sheet-first {
@@ -51,6 +56,7 @@
     animation: album-close-back 0.5s 0s both;
   }
 }
+
 .album__page {
   position: absolute;
   left: 0;
@@ -69,15 +75,13 @@
 .page__front {
   color: #fff;
   background-image: url("../img/front-2.jpg");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #37b6ce;
   font-weight: 700;
   text-transform: uppercase;
   z-index: 3;
   text-shadow: 0 0 5px #000;
-
 }
 .page__front-title {
   margin-top: 30px;
@@ -200,7 +204,6 @@
   z-index: 1;
 }
 
-
 .works__items {
   margin-top: 30px;
   display: flex;
@@ -237,7 +240,6 @@
   z-index: 2;
 }
 
-
 .connect__cancel {
   position: absolute;
   background-image: url("../img/cancel.svg");
@@ -268,7 +270,7 @@
   }
 }
 .album__btn.show {
-  animation:  btn_show 1s 1s both, btn_twitch 2s 2s infinite;
+  animation: btn_show 1s 1s both, btn_twitch 2s 2s infinite;
 }
 .album__btn.close {
   animation: btn_close 1s both;
@@ -277,7 +279,22 @@
 .connect__line {
   width: 100%;
 }
-
+.connect__text {
+  text-align: center;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+.connect__telegram {
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: -20px;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .coonect__input-wrapper {
   display: flex;
   margin-bottom: 10px;
@@ -285,8 +302,7 @@
 
 .connect__form-name,
 .connect__form-email,
-.connect__form-text
- {
+.connect__form-text {
   background-color: transparent;
   border-top: none;
   border-left: none;
@@ -315,16 +331,14 @@
   background-color: #333;
   cursor: pointer;
 }
-//map 
+//map
 .connect__map {
   width: 100%;
   height: 200px;
   margin-top: 50px;
 }
 
-
-
-//popups 
+//popups
 .popups {
   position: absolute;
   cursor: zoom-out;
@@ -346,11 +360,10 @@
 }
 
 .popup {
-  
   width: 1000px;
   display: none;
   box-shadow: 0 0 5px #000;
-  
+
   background-color: #ebe9dc;
   &.open {
     display: block;
@@ -368,7 +381,6 @@
   padding: 25px 10px;
   text-align: center;
   font-size: 18px;
-  
 }
 
 //animations
