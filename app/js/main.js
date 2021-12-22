@@ -1,4 +1,4 @@
-const albumBtn = document.querySelector(".album__btn");
+const albumBtn = document.querySelector(".album__btn-flag");
 const albumSheets = document.querySelectorAll(".album__sheet");
 const album = document.querySelector(".album");
 const cancelBtn = document.querySelector(".connect__cancel");

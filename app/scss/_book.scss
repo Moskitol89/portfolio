@@ -17,17 +17,42 @@
   width: 600px;
   perspective: 1600px;
 }
-
+.album__tabs {
+  top: -49px;
+  width: 100%;
+  z-index: 9;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+}
+.album__tab {
+  flex-grow: 2;
+}
+.album__tab-first {
+  flex-grow: 1;
+}
+.album__btn {
+  width: 100%;
+  height: 30px;
+  background-image: url("../img/paper.jpeg");
+  background-size: cover;
+  border: 1px solid #000;
+}
+.album__btn-first {
+  height: 50px;
+  background-color: purple;
+  border: none;
+}
 .album__sheet {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
   position: absolute;
 }
-//fix firefox bug: bacface-visibility dublicated for parent 
+//fix firefox bug: bacface-visibility dublicated for parent
 @-moz-document url-prefix() {
   .album__sheet {
-    backface-visibility: hidden;;
+    backface-visibility: hidden;
   }
 }
 
@@ -251,7 +276,7 @@
   cursor: pointer;
 }
 
-.album__btn {
+.album__btn-flag {
   position: absolute;
   background-color: transparent;
   bottom: 10px;
@@ -269,10 +294,10 @@
     border-bottom: 50px solid transparent;
   }
 }
-.album__btn.show {
+.album__btn-flag.show {
   animation: btn_show 1s 1s both, btn_twitch 2s 2s infinite;
 }
-.album__btn.close {
+.album__btn-flag.close {
   animation: btn_close 1s both;
 }
 
