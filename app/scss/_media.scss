@@ -1,0 +1,22 @@
+@media (max-width: 1800px) {
+    .page__1,
+    .page__3 {
+        transform: rotateY(0);
+        left: 0;
+    }
+    .album__btn-flag {
+        display: none;
+    }
+    .album__sheet {
+      
+    }
+    .album__page {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    .album__tabs {
+        display: flex;
+    }
+}

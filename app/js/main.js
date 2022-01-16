@@ -1,10 +1,14 @@
-const albumBtn = document.querySelector(".album__btn-flag");
+const albumFlag = document.querySelector(".album__btn-flag");
 const albumSheets = document.querySelectorAll(".album__sheet");
 const album = document.querySelector(".album");
 const cancelBtn = document.querySelector(".connect__cancel");
 const popupsWrapper = document.querySelector(".popups");
 const works = document.querySelectorAll(".works__item");
 const popups = document.querySelectorAll(".popup");
+//converted to array for indexOf()
+const albumBtns = Array.from(document.querySelectorAll(".album__btn"));
+//reversed for matching button - page order
+const tabPages = Array.from(document.querySelectorAll(".tab-page")).reverse();
 
 let clickedWorksTargetNumber;
 
@@ -21,9 +25,9 @@ albumSheets.forEach( el => {
 
 })
 
-albumBtn.addEventListener("click", function () {
-    albumBtn.classList.remove("show");
-    albumBtn.classList.add("close");
+albumFlag.addEventListener("click", function () {
+    albumFlag.classList.remove("show");
+    albumFlag.classList.add("close");
     albumSheets.forEach( el => {
        if(el.classList.contains("open") && !album.classList.contains("animating")) {
            el.classList.remove("open");
@@ -36,8 +40,8 @@ albumBtn.addEventListener("click", function () {
 });
 
 cancelBtn.addEventListener("click", function() {
-    albumBtn.classList.remove("close");
-    albumBtn.classList.add("show");
+    albumFlag.classList.remove("close");
+    albumFlag.classList.add("show");
     albumSheets.forEach( el => {
         if(el.classList.contains("open") && !album.classList.contains("animating")) {
             el.classList.remove("open");
@@ -69,3 +73,16 @@ popupsWrapper.addEventListener("click", function(event) {
     }
 });
 
+//media < 1800 
+albumBtns.forEach( el => {
+   el.addEventListener("click", function() {
+        if(!el.classList.contains("active")) {
+            for(let i = 0; i < albumBtns.length; i++){
+                albumBtns[i].classList.remove("active");
+                tabPages[i].classList.remove("active");
+            }
+            el.classList.add("active");
+            tabPages[albumBtns.indexOf(el)].classList.add("active");
+        }
+   });
+});
