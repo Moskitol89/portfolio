@@ -80,9 +80,13 @@ albumBtns.forEach( el => {
             for(let i = 0; i < albumBtns.length; i++){
                 albumBtns[i].classList.remove("active");
                 tabPages[i].classList.remove("active");
+                tabPages[i].parentNode.style.display = "none";
             }
             el.classList.add("active");
             tabPages[albumBtns.indexOf(el)].classList.add("active");
+            tabPages[albumBtns.indexOf(el)].parentNode.style.display = "block";
         }
    });
 });
+
+console.log(album.parentElement);

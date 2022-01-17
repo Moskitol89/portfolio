@@ -7,9 +7,7 @@
     .album__btn-flag {
         display: none;
     }
-    .album__sheet {
-      
-    }
+
     .album__page {
         display: none;
         &.active {
@@ -18,5 +16,8 @@
     }
     .album__tabs {
         display: flex;
+    }
+    .page__back {
+        display: none;
     }
 }
