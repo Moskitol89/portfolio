@@ -14,10 +14,41 @@
             display: block;
         }
     }
+    .album__btn-first {
+        color: transparent;
+    }
     .album__tabs {
         display: flex;
     }
     .page__back {
         display: none;
+    }
+    .connect__cancel {
+        display: none;
+    }
+}
+@media (max-width: 620px) {
+    body{
+        overflow-y: auto;
+    }
+    .main {
+        height: auto;
+        display: block;
+    }
+    .album {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .album__tabs {
+        display: none;
+    }
+    .album__sheet{
+        position: relative;
+        display: block;
+    }
+    .album__page {
+        position: relative;
+        display: block;
     }
 }

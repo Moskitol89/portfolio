@@ -88,5 +88,3 @@ albumBtns.forEach( el => {
         }
    });
 });
-
-console.log(album.parentElement);
