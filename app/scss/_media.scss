@@ -39,6 +39,7 @@
         display: flex;
         flex-direction: column-reverse;
         height: auto;
+        width: auto;
     }
     .album__tabs {
         display: none;
@@ -51,4 +52,17 @@
         position: relative;
         display: block;
     }
+    .album__sheet-first {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .front {
+        padding: 30px 0;
+        height: 100vh;
+    }
+    .page__front-title {
+        text-align: center;
+        margin-top: 0;
+    }
+   
 }
