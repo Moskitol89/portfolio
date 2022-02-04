@@ -30,6 +30,8 @@
 @media (max-width: 620px) {
     body{
         overflow-y: auto;
+         //fixed adaptive pop-up offset
+         position: fixed;
     }
     .main {
         height: auto;

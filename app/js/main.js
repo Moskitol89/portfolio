@@ -61,8 +61,10 @@ works.forEach( el => {
                 clickedWorksTargetNumber = i;
             }
         }
+        popupsWrapper.style.top = String(Math.round(window.scrollY) + "px");
         popupsWrapper.classList.add("open");
         popups[clickedWorksTargetNumber].classList.add("open");
+        document.body.style.overflow = "hidden";
     });
 });
 
@@ -70,6 +72,7 @@ popupsWrapper.addEventListener("click", function(event) {
     if(event.target.className == "popups open") {
         popupsWrapper.classList.remove("open");
         popups[clickedWorksTargetNumber].classList.remove("open");
+        document.body.style.overflow = ''
     }
 });
 
@@ -88,3 +91,4 @@ albumBtns.forEach( el => {
         }
    });
 });
+
