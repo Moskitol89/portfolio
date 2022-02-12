@@ -72,7 +72,7 @@ popupsWrapper.addEventListener("click", function(event) {
     if(event.target.className == "popups open") {
         popupsWrapper.classList.remove("open");
         popups[clickedWorksTargetNumber].classList.remove("open");
-        document.body.style.overflow = ''
+        document.body.style.overflow = "";
     }
 });
 

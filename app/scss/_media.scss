@@ -31,7 +31,7 @@
     body{
         overflow-y: auto;
          //fixed adaptive pop-up offset
-         position: fixed;
+        //  position: fixed;
     }
     .main {
         height: auto;
@@ -66,5 +66,31 @@
         text-align: center;
         margin-top: 0;
     }
-   
+    .about__items {
+        margin-top: 85px;
+    }
+    .about__item::before {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -55px;
+    }
+    
+    .about__item {
+        margin-left: 0;
+        text-align: center;
+    }
+    .about__item:not(:last-child) {
+        margin-bottom: 75px;
+    }
+    .works__items {
+        flex-direction: column;
+        align-content: center;
+    }
+    .connect__text  {
+        line-height: 40px;
+    }
+    .coonect__input-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
