@@ -15,5 +15,5 @@ $mailName = trim($mailName);
 $mailEmail = trim($mailEmail);
 $mailText = trim($mailText);
 
-mail("abdula.myausovich@mail.ru", "Portfolio form", "Name: ".$mailName."\r\nE-mail: ".$mailEmail."\r\nText: ".$mailText);
+mail("atpu6yt@yahoo.com", "Portfolio form", "Name: ".$mailName."\r\nE-mail: ".$mailEmail."\r\nText: ".$mailText);
 ?>
